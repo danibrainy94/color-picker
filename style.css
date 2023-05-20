@@ -16,15 +16,21 @@
     color: #BFC3BA;
 }
 
-ul {
+.option {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-ul .list-items {
-    list-style-type: none;
+.option .list-items {
     margin: 0 20px;
+}
+
+input[type = "radio"] {
+    border: 0px;
+    width: 30px;
+    height: 40px;
+    color: #60495A;
 }
 
 main {
@@ -40,7 +46,7 @@ main {
 }
 
 .color-bar {
-    width: 550px;
+    width: 650px;
     height: 80px;
     background: #2F2235;
     color: #BFC3BA;
