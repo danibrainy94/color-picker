@@ -1,10 +1,11 @@
-const simpleValues = document.querySelector(".simple")
-const hexValues = document.querySelector(".hex")
+const simpleValues = document.querySelector("#simple")
+const hexValues = document.querySelector("#hex")
 
 const colorName = document.querySelector("#color-text");
 const color = document.querySelector("#color-display");
 const button = document.querySelector("#btn");
-const diffColors = ["Amaranth Purple", "Barn red", "Bittersweet", "Flame", "Wenge", "Dark moss green", "Process cyan", "Antique white", "Mint", "Sinopia"];
+const colorText = document.querySelector(".color-text");
+const diffColors = ["Purple", "darkred", "grey", "magenta", "seagreen", "brown", "cyan", "darkgoldenrod", "crimson", "cadetblue"];
 
 
 
@@ -19,7 +20,7 @@ function getRandomNum() {
 
 function getHexColor () {
 
-    if (hexValues == "clicked") {
+    if (hexValues.checked) {
         let hexColor = "#";
 
     for (let i = 0; i < 6; i++) {
@@ -33,7 +34,7 @@ function getHexColor () {
     }
 
 function getSimpleColor() {
-    if (simpleValues == "clicked") {
+    if (simpleValues.checked) {
         let determinant = Math.floor(Math.random() * 10);
         color.style.backgroundColor = diffColors[determinant];
         colorName.textContent = diffColors[determinant];
